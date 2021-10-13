@@ -1,0 +1,38 @@
+name: MarvelUniverse
+options:
+  bundleIdPrefix: "com.globant"
+  createIntermediateGroups: true
+  deploymentTarget:
+    iOS: "14.0"
+packages:
+  Alamofire:
+    url: https://github.com/Alamofire/Alamofire.git
+    majorVersion: 5.4.3
+  AlamofireImage:
+    url: https://github.com/Alamofire/AlamofireImage.git
+    majorVersion: 4.2.0
+targets:
+  Marvel:
+    type: application
+    platform: iOS
+    sources:
+      - Marvel
+    scheme:
+      gatherCoverageData: true
+      testTargets:
+      - MarvelTests
+    dependencies:
+      - package: Alamofire
+      - package: AlamofireImage
+  MarvelTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: MarvelTests
+    settings:
+        BUNDLE_LOADER: $(BUILT_PRODUCTS_DIR)/$(TEST_TARGET_NAME).app/$(TEST_TARGET_NAME)
+        TEST_HOST: $(BUNDLE_LOADER)
+        TEST_TARGET_NAME: "Marvel"
+    dependencies:
+      - package: Alamofire
+      - package: AlamofireImage

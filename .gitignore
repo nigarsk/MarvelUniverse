@@ -1,0 +1,24 @@
+# User settings
+xcuserdata/
+
+# App packaging
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Swift Package Manager
+Packages/
+Package.pins
+*Package.resolved
+*.xcworkspace
+*.xcodeproj
+.swiftpm
+.build/
+
+### Xcode Patch ###
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcworkspace/contents.xcworkspacedata
+/*.gcno
+

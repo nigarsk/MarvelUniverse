@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <accessibilityOverrides dynamicTypePreference="3"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Marvel Detail View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="MarvelDetailViewController" id="Y6W-OH-hqX" customClass="MarvelDetailViewController" customModule="Marvel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uXi-XW-FTd">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder Image" translatesAutoresizingMaskIntoConstraints="NO" id="2BW-x0-CCo" customClass="MUImageView" customModule="Marvel" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="20" width="374" height="374"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="2BW-x0-CCo" secondAttribute="height" multiplier="1:1" id="jdf-Uf-wIe"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4XA-YT-k9M" customClass="MULabel" customModule="Marvel" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="414" width="374" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="2BW-x0-CCo" secondAttribute="trailing" constant="20" id="PKD-mQ-SkI"/>
+                                    <constraint firstItem="4XA-YT-k9M" firstAttribute="top" secondItem="2BW-x0-CCo" secondAttribute="bottom" constant="20" id="Vd8-p0-CTA"/>
+                                    <constraint firstItem="2BW-x0-CCo" firstAttribute="top" secondItem="uXi-XW-FTd" secondAttribute="top" constant="20" id="Xip-21-bwV"/>
+                                    <constraint firstAttribute="bottom" secondItem="4XA-YT-k9M" secondAttribute="bottom" constant="20" id="ci4-dN-iVg"/>
+                                    <constraint firstItem="4XA-YT-k9M" firstAttribute="centerX" secondItem="uXi-XW-FTd" secondAttribute="centerX" id="dQd-02-LCe"/>
+                                    <constraint firstAttribute="trailing" secondItem="4XA-YT-k9M" secondAttribute="trailing" constant="20" id="eZE-o3-Ssb"/>
+                                    <constraint firstItem="2BW-x0-CCo" firstAttribute="leading" secondItem="uXi-XW-FTd" secondAttribute="leading" constant="20" id="fpi-DV-NZl"/>
+                                    <constraint firstItem="4XA-YT-k9M" firstAttribute="leading" secondItem="uXi-XW-FTd" secondAttribute="leading" constant="20" id="ofw-ty-3Pb"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uXi-XW-FTd" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="6XJ-yb-afh"/>
+                            <constraint firstItem="uXi-XW-FTd" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="O4S-6U-I2A"/>
+                            <constraint firstItem="uXi-XW-FTd" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="fF1-8I-Qoy"/>
+                            <constraint firstAttribute="trailing" secondItem="uXi-XW-FTd" secondAttribute="trailing" id="jH7-sh-po7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="characterDescriptionLabel" destination="4XA-YT-k9M" id="XEu-U2-vW0"/>
+                        <outlet property="characterImageView" destination="2BW-x0-CCo" id="h2Q-vX-8vI"/>
+                        <outlet property="scrollView" destination="uXi-XW-FTd" id="Kef-jj-PDy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="25" y="73"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Placeholder Image" width="120" height="120"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
